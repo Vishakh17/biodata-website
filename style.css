@@ -1,172 +1,37 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f6f9;
-  color: #333;
-  scroll-behavior: smooth; 
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-
-header {
-  background: #007bff;
-  padding: 15px 30px;
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background: #007bff;
+  padding: 15px;
 }
 
-.logo {
+nav .logo {
   color: #fff;
-  margin: 0;
   font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 1px;
 }
 
 nav ul {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin: 0 15px;
 }
 
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-}
-
-nav ul li a.active,
-nav ul li a:hover {
-  border-bottom: 2px solid #fff;
-  color: yellow;
-}
-
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  color: #fff;
-  animation: fadeIn 1s ease-in-out;
-}
-
-.hero img.profile-pic {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  margin-bottom: 20px;
-  box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-
-.hero img.profile-pic:hover {
-  transform: scale(1.05);
-}
-
-.hero h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-  animation: slideDown 1s ease;
-}
-
-.hero h1 span {
-  color: yellow;
-}
-
-.hero p {
-  font-size: 18px;
-  animation: fadeIn 2s ease-in-out;
-}
-
-
-.content {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  animation: fadeUp 1s ease;
-}
-
-.content h1, .content h2 {
-  color: #007bff;
-  margin-bottom: 15px;
-}
-
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-form input, form textarea {
-  margin: 10px 0;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: all 0.3s ease;
-}
-
-form input:focus, form textarea:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0px 0px 8px rgba(0,123,255,0.4);
-}
-
-form button {
-  padding: 12px;
-  background: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-form button:hover {
-  background: #0056b3;
-  transform: scale(1.05);
-}
-
-
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeUp {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-@keyframes slideDown {
-  from {opacity: 0; transform: translateY(-20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-    background: #007bff;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    display: none;
-  }
+  font-weight: bold;
 }
 
 .menu-toggle {
@@ -176,6 +41,46 @@ form button:hover {
   cursor: pointer;
 }
 
+.container {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #007bff;
+}
+
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.skills-list div {
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
